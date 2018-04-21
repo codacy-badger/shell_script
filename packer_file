@@ -1,0 +1,24 @@
+{
+"builders": [
+{
+"type": "amazon-ebs",
+"access_key": "{{user `access`}}",  
+"secret_key": "{{user `secret`}}",
+"source_ami": "ami-5b673c34",
+"instance_type": "{{user `instance`}}",
+"region": "{{user `region`}}",
+"ssh_username": "{{user `user`}}",
+"ami_name": "my_packer_ami"
+}],
+
+"provisioners": [
+{
+"type": "file",
+"source": "/root/mypacker/drupal.sh",
+"destination": "/tmp/drupal.sh"
+},
+{
+"type": "shell",
+"script": "/root/mypacker/drupal.sh"
+}]
+}

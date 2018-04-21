@@ -1,0 +1,7 @@
+{
+"region": "ap-south-1",
+"instance": "t2.micro",
+"user": "ec2-user",
+"access": "put_access_key_here",
+"secret": "put_secret_access_key_here"
+}
